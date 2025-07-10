@@ -12,7 +12,7 @@ function Menu({ isMenuOpen, setIsMenuOpen }) {
   ];
   return (
     <div
-      className={`fixed z-20 w-full h-full flex flex-col bg-white/99 gap-10 justify-center items-center ${
+      className={`md:hidden fixed z-20 w-full h-full flex flex-col bg-white/99 gap-10 justify-center items-center ${
         isMenuOpen ? "translate-x-0" : "-translate-x-full"
       }
       transform transition-transform duration-300 ease-in-out`}

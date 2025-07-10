@@ -11,7 +11,7 @@ import Footer from "./Components/Footer";
 import Menu from "./Components/Menu";
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState("false");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="flex flex-col min-h-screen">
       <div className="flex-grow">
