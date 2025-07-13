@@ -3,10 +3,9 @@ import Header from "../Components/Header";
 import { Link } from "react-router";
 import FeaturedServices from "../Components/FeaturedServices";
 
-function Home({ isMenuOpen, setIsMenuOpen }) {
+function Home({ featuredServices }) {
   return (
     <div>
-      <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <div className="flex flex-col gap-5 md:gap-10 top font-bold text-center px-4 md:px-0 md:w-3/4 mx-auto py-20">
         <h1 className="text-4xl md:text-8xl md:mt-10">
           Empowering Brands with Creative Digital Solutions
@@ -26,11 +25,14 @@ function Home({ isMenuOpen, setIsMenuOpen }) {
           need a stunning website, a compelling marketing strategy, or
           eye-catching visuals, our team is here to elevate your brand.
         </p>
-        <Link className="ms-auto me-5 md:me-30 text-sm md:text-lg underline" to="/about">
+        <Link
+          className="ms-auto me-5 md:me-30 text-sm md:text-lg underline"
+          to="/about"
+        >
           Read Our Story
         </Link>
       </div>
-      <FeaturedServices />
+      <FeaturedServices featuredServices={featuredServices} />
     </div>
   );
 }
