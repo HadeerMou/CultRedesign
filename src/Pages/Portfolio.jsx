@@ -1,6 +1,8 @@
 import React from "react";
 import WebSection from "../Components/WebSection";
 import Testimonials from "../Components/Testimonials";
+import GraphicDesign from "../Components/graphicDesign";
+import Photography from "../Components/Photography";
 
 function Portfolio() {
   const marketingData = [
@@ -95,7 +97,9 @@ function Portfolio() {
       <WebSection />
       <Testimonials />
       <section className="flex flex-col gap-30">
-        <h1 className="text-6xl tracking-widest text-center pb-8 mt-30">DIGITAL MARKETING</h1>
+        <h1 className="text-6xl tracking-widest text-center pb-8 mt-30">
+          DIGITAL MARKETING
+        </h1>
         {marketingData.map((data) => (
           <div key={data.id} className="flex items-center gap-30 ms-10 me-30">
             <img className="w-150 h-170" src={data.img} alt={data.name} />
@@ -107,7 +111,10 @@ function Portfolio() {
               <div className="flex flex-col mt-10 gap-5">
                 <h3 className="text-2xl tracking-widest">Strategies used:</h3>
                 {data.stratigies.map((strategy) => (
-                  <div key={strategy.id} className="flex flex-col gap-2 text-sm">
+                  <div
+                    key={strategy.id}
+                    className="flex flex-col gap-2 text-sm"
+                  >
                     <h4>{strategy.name}</h4>
                     <p>{strategy.desc}</p>
                   </div>
@@ -124,6 +131,8 @@ function Portfolio() {
           </div>
         ))}
       </section>
+      <GraphicDesign />
+      <Photography />
     </div>
   );
 }
