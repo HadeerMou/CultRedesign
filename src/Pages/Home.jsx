@@ -6,11 +6,11 @@ import FeaturedServices from "../Components/FeaturedServices";
 function Home({ featuredServices }) {
   return (
     <div>
-      <div className="flex flex-col gap-5 md:gap-10 top font-bold text-center px-4 md:px-0 md:w-3/4 mx-auto py-20">
+      <div className="flex flex-col gap-5 md:gap-10 top font-bold text-center px-4 md:px-0 md:w-3/4 mx-auto py-40">
         <h1 className="text-4xl md:text-8xl md:mt-10">
           Empowering Brands with Creative Digital Solutions
         </h1>
-        <p className="md:text-xl">
+        <p className="md:text-xl text-yellow-500 tracking-wide">
           Cult Agency brings your brand’s vision to life through innovative web
           development, dynamic digital marketing, and captivating visual
           content.

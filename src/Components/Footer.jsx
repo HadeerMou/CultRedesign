@@ -7,7 +7,7 @@ function Footer() {
     { name: "About", src: "/about" },
     { name: "Services", src: "/services" },
     { name: "Portfolio", src: "/portfolio" },
-    { name: "Blog", src: "/blog" },
+    { name: "Blogs", src: "/blogs" },
     { name: "Contact", src: "/contact" },
   ];
   return (

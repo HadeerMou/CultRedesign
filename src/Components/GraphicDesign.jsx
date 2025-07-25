@@ -69,7 +69,7 @@ function GraphicDesign() {
 
   return (
     <div className="w-full flex flex-col items-center overflow-hidden h-[120vh] relative">
-      <h1 className="block text-[50px] mt-28 text-center tracking-[20px] py-6 text-shadow-lg">
+      <h1 className="block text-[50px] mt-10 md:mt-28 text-center tracking-[20px] py-6 text-shadow-lg">
         Graphic Design
       </h1>
 

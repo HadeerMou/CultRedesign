@@ -46,7 +46,7 @@ function Testimonials() {
         <span className="tracking-widest">TESTIMONIALS</span>
         <h1 className="bg-white/90 text-black text-5xl py-4 px-5">Clients Says</h1>
       </div>
-      <div className="grid grid-cols-2 gap-4 mx-20">
+      <div className="grid md:grid-cols-2 gap-4 md:mx-20">
         {reviewsData.map((review) => (
           <div
             key={review.id}

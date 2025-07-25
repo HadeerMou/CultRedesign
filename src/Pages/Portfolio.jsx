@@ -3,6 +3,7 @@ import WebSection from "../Components/WebSection";
 import Testimonials from "../Components/Testimonials";
 import GraphicDesign from "../Components/graphicDesign";
 import Photography from "../Components/Photography";
+import { useNavigate } from "react-router";
 
 function Portfolio() {
   const marketingData = [
@@ -82,10 +83,11 @@ function Portfolio() {
       ],
     },
   ];
+  const navigate = useNavigate();
   return (
-    <div className="mt-30 bg-black/90 text-white">
-      <div className="flex justify-around items-center py-20">
-        <div class="flex flex-col text-[12rem] tracking-wider">
+    <div className="bg-black/90 text-white pt-10">
+      <div className="flex flex-col md:flex-row justify-between items-center py-20">
+        <div class="flex flex-col text-8xl md:text-[12rem] tracking-wider md:ms-20">
           <h1 class="port">PORT -</h1>
           <h1 class="folio">FOLIO</h1>
           <h3 className="text-2xl text-center text-yellow-100 tracking-widest">
@@ -96,12 +98,15 @@ function Portfolio() {
       </div>
       <WebSection />
       <Testimonials />
-      <section className="flex flex-col gap-30">
+      <section className="flex flex-col gap-12 md:gap-30">
         <h1 className="text-6xl tracking-widest text-center pb-8 mt-30">
           DIGITAL MARKETING
         </h1>
         {marketingData.map((data) => (
-          <div key={data.id} className="flex items-center gap-30 ms-10 me-30">
+          <div
+            key={data.id}
+            className="flex flex-col md:flex-row items-center gap-5 mx-5 md:gap-30 md:ms-10 md:me-30"
+          >
             <img className="w-150 h-170" src={data.img} alt={data.name} />
             <div className="flex flex-col">
               <div className="flex justify-between">
@@ -133,6 +138,20 @@ function Portfolio() {
       </section>
       <GraphicDesign />
       <Photography />
+      <div class="flex flex-col gap-5 p-10 md:p-20 justify-center items-center text-center mx-auto">
+        <h3 class="md:max-w-200 md:text-2xl tracking-wider">
+          Ready to take your brand to the next level? Whether you're looking for
+          cutting-edge web development, impactful digital marketing, creative
+          graphic design, or professional photography, Cult Agency is here to
+          help. Let’s collaborate and create something extraordinary.
+        </h3>
+        <button
+          className="bg-red-100 rounded-3xl md:text-lg py-3 px-5 text-black cursor-pointer"
+          onClick={() => navigate("/contact-us")}
+        >
+          Book Now
+        </button>
+      </div>
     </div>
   );
 }

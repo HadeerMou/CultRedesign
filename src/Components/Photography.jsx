@@ -111,7 +111,9 @@ function Photography() {
   const nav = useNavigate();
   return (
     <div className="flex flex-col justify-center items-center w-full">
-      <h2 className="text-5xl tracking-[30px] py-5">Photography</h2>
+      <h2 className="text-5xl tracking-widest md:tracking-[30px] py-5">
+        Photography
+      </h2>
       <div className="w-full mt-10 ">
         {categories.map((category) => {
           const isOpen = openCategoryId === category.id;
@@ -125,7 +127,7 @@ function Photography() {
                   )
                 }
                 key={category.id}
-                className="flex items-center w-3/5 mx-auto py-4 mb-6 border border-white rounded shadow-2xl text-center text-2xl"
+                className="flex items-center md:w-3/5 mx-5 md:mx-auto py-4 mb-6 border border-white rounded shadow-2xl text-center text-2xl"
               >
                 <h2 className="flex-grow">{category.name}</h2>
                 <MdArrowDropDown
@@ -135,16 +137,26 @@ function Photography() {
                 />
               </div>
               {isOpen && (
-                <div className="grid grid-cols-4 w-3/5 mx-auto">
+                <div className="grid grid-cols-4 md:w-3/5 mx-5 md:mx-auto">
                   {category.products.map((product) => (
                     <div
                       key={product.id}
                       onClick={() => nav(product.link)}
-                      className="flex flex-col"
+                      className="flex flex-col relative group cursor-pointer overflow-hidden border-transparent border hover:border-white transition-all duration-300"
                     >
-                      <img src={product.img} alt={product.name} />
-                      <h3>{product.name}</h3>
-                      <p>{product.desc}</p>
+                      <img
+                        className="h-30 md:h-60 "
+                        src={product.img}
+                        alt={product.name}
+                      />
+                      <div className="flex flex-col gap-3 absolute bg-black/40 text-center justify-center items-center w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 className="text-3xl text-red-300/80 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                          {product.name}
+                        </h3>
+                        <p className="transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 mx-1">
+                          {product.desc}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>

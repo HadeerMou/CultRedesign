@@ -28,28 +28,30 @@ function Services() {
     },
   ];
   return (
-    <div className="p-20 bg-black/90 text-white">
-      <h1 className="text-[14rem] tracking-widest text-center mb-30 mt-10">
+    <div className="p-5 md:p-20 bg-black/90 text-white">
+      <h1 className="text-5xl md:text-[14rem] tracking-widest text-center mb-20 mt-10">
         Services
       </h1>
-      <div className="flex flex-col gap-30">
+      <div className="flex flex-col gap-20 md:gap-30">
         {servs.map((serv) => (
           <div
             key={serv.id}
-            className={`flex items-center ${
-              serv.id % 2 === 1 ? "flex-row-reverse gap-30" : "gap-30"
-            }`}
+            className={`flex flex-col ${
+              serv.id % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
+            } items-center gap-10 md:gap-30`}
           >
-            <div className="flex flex-col gap-15">
-              <h2 className="text-6xl text-stroke">{serv.name}</h2>
-              <div className="flex flex-col gap-15">
-                <p className="text-xl me-5">{serv.desc}</p>
-                <button className="bg-red-100 text-black text-xl px-6 py-4 w-fit mx-auto rounded-xl">
-                  Get In Touch!
-                </button>
-              </div>
+            <div className="flex flex-col gap-6 md:gap-10 md:w-1/2">
+              <h2 className="text-3xl md:text-6xl text-stroke">{serv.name}</h2>
+              <p className="text-base md:text-xl">{serv.desc}</p>
+              <button className="bg-red-100 text-black text-base md:text-xl px-6 py-3 w-fit mx-auto md:mx-0 rounded-xl">
+                Get In Touch!
+              </button>
             </div>
-            <img className="w-150 h-160" src={serv.img} alt={serv.name} />
+            <img
+              className="w-full max-w-sm md:max-w-lg md:w-1/2 rounded-xl"
+              src={serv.img}
+              alt={serv.name}
+            />
           </div>
         ))}
       </div>

@@ -8,25 +8,35 @@ function Header({ logoSrc, isMenuOpen, setIsMenuOpen }) {
     { name: "About", src: "/about" },
     { name: "Services", src: "/services" },
     { name: "Portfolio", src: "/portfolio" },
-    { name: "Blog", src: "/blog" },
+    { name: "Blogs", src: "/blogs" },
     { name: "Contact", src: "/contact" },
   ];
   const location = useLocation();
 
-  if (location.pathname === "/about" || "/services" || "/portfolio") {
+  if (
+    location.pathname === "/about" ||
+    location.pathname === "/services" ||
+    location.pathname === "/portfolio" ||
+    location.pathname === "/blogs" ||
+    location.pathname.startsWith("/blog/")
+  ) {
     logoSrc = "/assets/cultLogo 2.png";
-  } else if (location.pathname === "/portfolio") {
+  } else if (location.pathname === "/") {
     logoSrc = "/assets/cultLogo 1.png";
   }
   const isHomePage = location.pathname === "/";
 
   return (
-    <div className="fixed w-full z-30 flex items-center justify-between">
-      <div>
+    <div
+      className={`fixed w-full z-30 flex items-center justify-between ${
+        isHomePage ? "bg-white" : ""
+      }`}
+    >
+      <Link to={"/"}>
         <img className="w-18 md:w-25 m-1" src={logoSrc} alt="" />
-      </div>
+      </Link>
       {isHomePage && (
-        <div className="hidden md:flex items-center gap-15 me-15 font-bold">
+        <div className="hidden md:flex items-center gap-18 me-15 font-bold">
           {Pages.map((page, index) => (
             <Link key={index} to={page.src}>
               {page.name}
