@@ -1,7 +1,7 @@
 import React from "react";
+import GraphicDesign from "../Components/GraphicDesign";
 import WebSection from "../Components/WebSection";
 import Testimonials from "../Components/Testimonials";
-import GraphicDesign from "../Components/graphicDesign";
 import Photography from "../Components/Photography";
 import { useNavigate } from "react-router";
 

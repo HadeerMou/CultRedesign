@@ -38,7 +38,6 @@ function GraphicDesign() {
       name: "Dozen Avenue Brand Packging",
     },
   ];
-
   const [selectedId, setSelectedId] = useState(1);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
