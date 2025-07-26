@@ -127,7 +127,7 @@ function Photography() {
                   )
                 }
                 key={category.id}
-                className="flex items-center md:w-3/5 mx-5 md:mx-auto py-4 mb-6 border border-white rounded shadow-2xl text-center text-2xl"
+                className="flex items-center md:w-3/5 mx-5 md:mx-auto py-4 mb-6 border border-white rounded shadow-lg shadow-black text-center text-2xl"
               >
                 <h2 className="flex-grow">{category.name}</h2>
                 <MdArrowDropDown

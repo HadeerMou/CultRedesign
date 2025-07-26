@@ -12,19 +12,13 @@ function Header({ logoSrc, isMenuOpen, setIsMenuOpen }) {
     { name: "Contact", src: "/contact" },
   ];
   const location = useLocation();
-
-  if (
-    location.pathname === "/about" ||
-    location.pathname === "/services" ||
-    location.pathname === "/portfolio" ||
-    location.pathname === "/blogs" ||
-    location.pathname.startsWith("/blog/")
-  ) {
-    logoSrc = "/assets/cultLogo 2.png";
-  } else if (location.pathname === "/") {
-    logoSrc = "/assets/cultLogo 1.png";
-  }
   const isHomePage = location.pathname === "/";
+
+  if (isHomePage) {
+    logoSrc = "/assets/cultLogo 1.png";
+  } else {
+    logoSrc = "/assets/cultLogo 2.png";
+  }
 
   return (
     <div

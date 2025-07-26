@@ -17,12 +17,14 @@ function FeaturedServices({ featuredServices }) {
                 src={service.image}
                 alt=""
               />
-              <h1 className="font-bold text-2xl md:text-4xl text-center tracking-widest pt-2">
-                {service.name}
-              </h1>
-              <p className="me-5 text-sm md:text-base text-center tracking-wider py-1">
-                {service.description}
-              </p>
+              <div className="flex flex-col gap-1 md:gap-2 p-2 md:p-3">
+                <h1 className="font-bold text-2xl md:text-4xl text-center tracking-widest pt-2">
+                  {service.name}
+                </h1>
+                <p className="text-sm md:text-base text-center tracking-wider py-1 text-red-300 border border-red-300/10 shadow">
+                  {service.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

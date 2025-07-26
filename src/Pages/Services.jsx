@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 function Services() {
   const servs = [
@@ -27,6 +28,7 @@ function Services() {
       img: "/assets/photography/portraits/photography 1.png",
     },
   ];
+  const navigate = useNavigate();
   return (
     <div className="p-5 md:p-20 bg-black/90 text-white">
       <h1 className="text-5xl md:text-[14rem] tracking-widest text-center mb-20 mt-10">
@@ -43,7 +45,10 @@ function Services() {
             <div className="flex flex-col gap-6 md:gap-10 md:w-1/2">
               <h2 className="text-3xl md:text-6xl text-stroke">{serv.name}</h2>
               <p className="text-base md:text-xl">{serv.desc}</p>
-              <button className="bg-red-100 text-black text-base md:text-xl px-6 py-3 w-fit mx-auto md:mx-0 rounded-xl">
+              <button
+                onClick={() => navigate("/contact")}
+                className="cursor-pointer bg-red-100 hover:opacity-60 transform duration-300 text-black text-base md:text-xl px-6 py-3 w-fit mx-auto md:mx-0 rounded-xl"
+              >
                 Get In Touch!
               </button>
             </div>

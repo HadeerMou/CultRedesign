@@ -16,8 +16,12 @@ function Footer() {
       <div className="flex justify-between items-center tracking-wide *:p-6 *:gap-2">
         <div className="flex flex-col">
           <h3>Contact Info</h3>
-          <p>Phone: </p>
-          <p>Email: </p>
+          <p className="flex gap-5 mt-4">
+            Phone: <a href="tel:+20 150 051 1826">+20 150 051 1826</a>
+          </p>
+          <p className="flex gap-6">
+            Email: <a href="mailto:info@cultsmma.com">info@cultsmma.com</a>
+          </p>
         </div>
         <div className="flex flex-col">
           {Pages.map((page, index) => (

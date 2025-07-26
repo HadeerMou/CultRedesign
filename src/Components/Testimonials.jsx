@@ -44,9 +44,11 @@ function Testimonials() {
     <div id="testimonials" className="px-10">
       <div class="text-xl flex flex-col gap-2 items-center mb-10">
         <span className="tracking-widest">TESTIMONIALS</span>
-        <h1 className="bg-white/90 text-black text-5xl py-4 px-5">Clients Says</h1>
+        <h1 className="bg-white/90 text-black text-2xl md:text-5xl py-4 px-5">
+          Clients Says
+        </h1>
       </div>
-      <div className="grid md:grid-cols-2 gap-4 md:mx-20">
+      <div className="grid md:grid-cols-2 gap-2 md:gap-4 md:mx-20">
         {reviewsData.map((review) => (
           <div
             key={review.id}
@@ -78,7 +80,7 @@ function Testimonials() {
                 </div>
               </div>
             </div>
-            <div className="mt-4 me-5">
+            <div className="text-xs md:text-base mt-2 md:mt-4 md:me-5">
               <p>{review.review}</p>
             </div>
           </div>

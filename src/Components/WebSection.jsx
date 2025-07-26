@@ -32,11 +32,11 @@ function WebSection() {
     },
   ];
   return (
-    <section className="web-development text-center">
-      <h2 className="text-4xl md:text-7xl py-10 tracking-widest">
+    <section className="mb-10 text-center">
+      <h2 className="text-4xl md:text-7xl mb-2 md:py-10 tracking-widest">
         WEB DEVELOPMENT
       </h2>
-      <h3 className="md:text-2xl text-yellow-300 mb-15 tracking-widest">
+      <h3 className="md:text-2xl text-yellow-300 mb-6 md:mb-15 tracking-widest">
         DESIGN . DEVELOP . CONQUER
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
@@ -48,21 +48,15 @@ function WebSection() {
             rel="noreferrer"
             className="block"
           >
-            <div className="relative h-[600px] overflow-hidden group transition-transform duration-600 ease-in-out hover:-translate-y-5">
-              <div className="absolute top-0 left-0 w-full  ">
-                <img
-                  src={data.img}
-                  alt={data.name}
-                  className="w-full md:h-[400px]"
-                />
-                <div className="w-full mt-2 md:h-[150px] bg-black/80 flex flex-col gap-1 justify-center items-center md:opacity-0 group-hover:opacity-100 transition-transform duration-600 ease-in-out">
-                  <h3 className="text-xl text-red-400 font-bold">
-                    {data.name}
-                  </h3>
-                  <p className="text-white text-sm text-center px-4">
-                    {data.desc}
-                  </p>
-                </div>
+            <div className="overflow-hidden group transition-transform duration-600 ease-in-out hover:-translate-y-5">
+              <img
+                src={data.img}
+                alt={data.name}
+                className="w-full h-[350px] object-cover"
+              />
+              <div className="bg-black/80 p-4 flex flex-col items-center justify-center gap-2 transition-opacity duration-300 ease-in-out opacity-100 md:opacity-0 group-hover:opacity-100">
+                <h3 className="text-lg text-red-400 font-bold">{data.name}</h3>
+                <p className="text-white text-sm text-center">{data.desc}</p>
               </div>
             </div>
           </a>
